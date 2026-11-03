@@ -5,7 +5,8 @@ class OpponentModel:
         self.action_counts = {
             "call": 0,
             "raise": 0,
-            "fold": 0
+            "fold": 0,
+            "check": 0
         }
 
     def observe_action(self, action):
@@ -33,5 +34,7 @@ class OpponentModel:
         self.action_counts = {
             "call": 0,
             "raise": 0,
-            "fold": 0
+            "fold": 0,
+            "check": 0
         }
+
