@@ -119,7 +119,7 @@ def test_ev_accounting():
 def check_against_rlcard(n_hands=2000):
     """Requires `pip install rlcard`. Verifies chip/label logic on real games."""
     import rlcard
-    from rlcard.agents import RandomAgent
+    from rlcard.agents.random_agent import RandomAgent
     from decision_policy import AdaptivePolicyAgent
     env = rlcard.make("leduc-holdem")
     checked = []
