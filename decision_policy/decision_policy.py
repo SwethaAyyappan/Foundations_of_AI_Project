@@ -315,7 +315,7 @@ if __name__ == "__main__":
         "Aggressive":   profile(0.05, 0.25, 0.70, 0.30, 0.70),
         "Conservative": profile(0.55, 0.40, 0.05, 0.90, 0.10),
     }
-    # player 0 is us; records follow RLCard turn order
+    # current_player is us; records follow RLCard turn order
     situations = {
         "J, preflop, SB called, we can check":
             (dict(hand="SJ", public_card=None, all_chips=[2, 2], my_chips=2, current_player=1,
