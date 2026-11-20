@@ -1,0 +1,159 @@
+
+============================================================
+FIXED VS ADAPTIVE AI EXPERIMENT
+============================================================
+
+Project: Adaptive Opponent Modeling in Leduc Hold'em
+Environment: RLCard - Leduc Hold'em
+
+EXPERIMENT CONFIGURATION
+------------------------
+Games per condition: 500
+Opponent strategies:
+1. Aggressive
+2. Conservative
+3. Random
+
+Agents compared:
+- Fixed Agent: Decision policy without learned opponent estimates.
+- Adaptive Agent: Decision policy using Bayesian opponent estimates.
+
+Evaluation metrics:
+- Average payoff
+- Win rate
+- Number of wins
+- Number of losses
+- Number of ties
+
+============================================================
+1. RESULTS
+============================================================
+
+AGAINST AGGRESSIVE OPPONENT
+--------------------------
+                    Fixed       Adaptive
+Average payoff      -0.2870      0.2200
+Win rate (%)         18.40       24.60
+Wins                 92          123
+Losses               401         344
+Ties                 7           33
+
+Adaptive payoff improvement: +0.507
+
+
+AGAINST CONSERVATIVE OPPONENT
+----------------------------
+                    Fixed       Adaptive
+Average payoff       0.1920      0.2890
+Win rate (%)         47.00       53.60
+Wins                 235         268
+Losses               229         203
+Ties                 36          29
+
+Adaptive payoff improvement: +0.097
+
+
+AGAINST RANDOM OPPONENT
+-----------------------
+                    Fixed       Adaptive
+Average payoff       0.1880      0.1330
+Win rate (%)         45.40       44.60
+Wins                 227         223
+Losses               266         268
+Ties                 7           9
+
+Adaptive payoff improvement: -0.055
+
+
+============================================================
+2. LEARNED OPPONENT PROBABILITIES
+============================================================
+
+AGGRESSIVE OPPONENT
+
+Context (0, True):
+Fold:  0.132
+Call:  0.319
+Raise: 0.549
+
+Context (1, True):
+Fold:  0.158
+Call:  0.342
+Raise: 0.500
+
+
+CONSERVATIVE OPPONENT
+
+Context (0, True):
+Fold:  0.405
+Call:  0.533
+Raise: 0.062
+
+Context (1, True):
+Fold:  0.278
+Call:  0.653
+Raise: 0.069
+
+
+RANDOM OPPONENT
+
+Context (0, True):
+Fold:  0.292
+Call:  0.269
+Raise: 0.439
+
+Context (1, True):
+Fold:  0.344
+Call:  0.398
+Raise: 0.258
+
+
+============================================================
+3. OBSERVATIONS
+============================================================
+
+1. The adaptive agent achieved a higher average payoff
+   against aggressive opponents.
+
+2. The adaptive agent also performed better against
+   conservative opponents.
+
+3. Against random opponents, the fixed agent performed
+   slightly better.
+
+4. The Bayesian opponent model learned different action
+   distributions for different opponent strategies.
+
+5. Opponent estimates were used by the decision policy
+   to estimate hand ranges and calculate expected values.
+
+============================================================
+4. CONCLUSION
+============================================================
+
+Opponent modeling improved the performance of our
+adaptive agent against aggressive and conservative
+opponents in these experiments.
+
+However, adaptation did not improve performance against
+every opponent strategy.
+
+The results suggest that Bayesian opponent modeling can
+help an agent exploit predictable opponent behavior,
+although its effectiveness depends on the opponent.
+
+============================================================
+5. EXPERIMENT LIMITATIONS
+============================================================
+
+- Each condition used 500 games.
+- Fixed and adaptive runs were not paired using identical
+  random seeds.
+- Statistical significance has not been established.
+- The decision policy uses heuristic hand-range and
+  expected-value approximations.
+- Results may vary across random seeds.
+
+============================================================
+END OF EXPERIMENT RESULTS
+============================================================

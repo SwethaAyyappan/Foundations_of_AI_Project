@@ -1,0 +1,33 @@
+
+STRATEGY-SWITCHING EXPERIMENT
+=============================
+
+Total games: 500
+Switch after game: 250
+
+Initial opponent: Aggressive
+New opponent: Conservative
+
+Decay factor: 0.95
+
+Results:
+Average payoff: 0.243
+Win rate: 35.4%
+Wins: 177
+Losses: 288
+Ties: 35
+
+Adaptation analysis:
+Relevant observations after switch: 206
+Adaptation lag: 28 relevant observations
+
+Final opponent estimates (Context 0, True):
+Fold: 0.420
+Call: 0.443
+Raise: 0.137
+
+Conclusion:
+The Bayesian opponent model adapted to the
+opponent's strategy change. It reached the
+predefined adaptation threshold within
+28 relevant observations.
